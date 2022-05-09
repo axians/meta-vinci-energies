@@ -6,12 +6,12 @@ SRC_URI += "file://zscaler-root-ca.crt"
 
 S = "${WORKDIR}"
 
-FILES_${PN} += "${datadir}/ca-certificates/zscaler-root-ca.crt"
+FILES_${PN} += "/usr/local/share/ca-certificates/zscaler-root-ca.crt"
 
 do_install() {
              
     # Install certificates
-    install -d ${D}${datadir}/ca-certificates
-    install -m 0444 ${WORKDIR}/zscaler-root-ca.crt ${D}${datadir}/ca-certificates/
+    install -d ${D}/usr/local/share/ca-certificates
+    install -m 0444 ${WORKDIR}/zscaler-root-ca.crt ${D}/usr/local/share/ca-certificates
 }
 
