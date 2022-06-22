@@ -6,7 +6,7 @@ SRC_URI += "file://zscaler-root-ca.crt"
 
 S = "${WORKDIR}"
 
-FILES_${PN} += "/usr/local/share/ca-certificates/zscaler-root-ca.crt"
+FILES:${PN} += "/usr/local/share/ca-certificates/zscaler-root-ca.crt"
 
 do_install() {
              
